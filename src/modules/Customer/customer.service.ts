@@ -1,7 +1,7 @@
 import { Component, ForbiddenException, UseGuards } from '@nestjs/common'
 import { InjectRepository } from '@nestjs/typeorm'
 import { Repository, Like } from 'typeorm'
-import { Customer } from 'Entities/Customer.entity'
+import { Customer } from '../../Entities/Customer.entity'
 import { CustomerDTO } from '../../dataTransferObjects/Customer'
 
 @Component()

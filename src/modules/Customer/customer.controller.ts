@@ -10,7 +10,7 @@ import {
 } from '@nestjs/common'
 import { InjectRepository } from '@nestjs/typeorm'
 
-import { ValidationPipe } from 'Pipes/validations.pipe'
+import { ValidationPipe } from '../../Pipes/validations.pipe'
 import { EntityManager, Repository } from 'typeorm'
 
 import { Roles } from '../../Decorators/roles.decorator'

@@ -8,7 +8,7 @@ import {
 import { Customer } from '../../Entities/Customer.entity'
 import { CustomerService } from './customer.service'
 import { CustomerController } from './customer.controller'
-import RequestLogger from 'middlewares/logger'
+import RequestLogger from '../../middlewares/logger'
 
 const catModuleConfig = {
   imports: [TypeOrmModule.forFeature([Customer])],
