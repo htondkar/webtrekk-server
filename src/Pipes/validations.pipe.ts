@@ -7,6 +7,12 @@ import {
 import { validate } from 'class-validator'
 import { plainToClass } from 'class-transformer'
 
+/**
+ * Validate inputs.
+ * checks to see if it should validate the input.
+ * NOTE: uses class-validator which means plain objects
+ * should first be converted to class instances
+ */
 @Pipe()
 export class ValidationPipe implements PipeTransform<any> {
   constructor(private readonly validationOptions?: object) {}

@@ -10,8 +10,6 @@ import {
 } from '@nestjs/common'
 import { InjectRepository } from '@nestjs/typeorm'
 
-import { CatDto } from 'dataTransferObjects/Cat'
-import { Cat } from 'Entities/Cat.entity'
 import { ValidationPipe } from 'Pipes/validations.pipe'
 import { EntityManager, Repository } from 'typeorm'
 
@@ -57,6 +55,6 @@ export class CustomerController {
     @Param('id', new ParseIntPipe())
     id,
   ) {
-    return this.customerService.editCat(id, body)
+    return this.customerService.editCustomer(id, body)
   }
 }

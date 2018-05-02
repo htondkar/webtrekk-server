@@ -1,4 +1,11 @@
-import { IsDate, Min, IsInt, IsIn, IsString } from 'class-validator'
+import {
+  IsDate,
+  Min,
+  IsInt,
+  IsIn,
+  IsString,
+  IsDateString,
+} from 'class-validator'
 
 export class Name {
   first: string
@@ -6,17 +13,12 @@ export class Name {
 }
 
 export class CustomerDTO {
-  @IsInt() customerID: number
-
-  @IsString() name: string
-
-  @IsDate() birthday: Date
-
+  @IsString() firstName: string
+  @IsString() lastName: string
+  @IsDateString() birthday: string
   @IsIn(['m', 'f'])
   gender: 'm' | 'f'
-
-  @IsDate() lastContact: Date
-
+  @IsDateString() lastContact: string
   @Min(0)
   customerLifetimeValue: number
 }

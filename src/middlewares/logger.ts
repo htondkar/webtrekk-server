@@ -1,5 +1,7 @@
 const RequestLogger = (req, res, next) => {
-  console.log(req.path)
+  console.log(
+    `[${req.method}] ${req.path} | params: ${JSON.stringify(req.params)}`,
+  )
   next()
 }
 
