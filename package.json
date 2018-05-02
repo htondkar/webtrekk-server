@@ -1,7 +1,7 @@
 {
-  "name": "nest-typescript-starter",
+  "name": "Webtrekk Challenge",
   "version": "1.0.0",
-  "description": "Nest TypeScript starter repository",
+  "description": "This is a test project for Webtrekk interview process",
   "license": "MIT",
   "scripts": {
     "format": "prettier --write \"**/*.ts\"",
