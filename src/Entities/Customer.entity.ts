@@ -14,10 +14,10 @@ export class Customer {
   birthday: Date
 
   @Column()
-  @IsIn(['m', 'f'])
-  gender: 'm' | 'f'
+  @IsIn(['m', 'w'])
+  gender: 'm' | 'w'
 
-  @Column('datetime')
+  @Column({ type: 'datetime', default: null, nullable: true })
   @IsDate()
   lastContact: Date
 

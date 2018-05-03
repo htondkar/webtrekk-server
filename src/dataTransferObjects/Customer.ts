@@ -5,20 +5,30 @@ import {
   IsIn,
   IsString,
   IsDateString,
+  Allow,
+  IsDefined,
 } from 'class-validator'
 
-export class Name {
-  first: string
-  last: string
-}
-
 export class CustomerDTO {
-  @IsString() firstName: string
-  @IsString() lastName: string
-  @IsDateString() birthday: string
-  @IsIn(['m', 'f'])
-  gender: 'm' | 'f'
-  @IsDateString() lastContact: string
+  @IsDefined()
+  @IsString()
+  firstName: string
+
+  @IsDefined()
+  @IsString()
+  lastName: string
+
+  @IsDefined()
+  @IsDateString()
+  birthday: string
+
+  @IsDefined()
+  @IsIn(['m', 'w'])
+  gender: 'm' | 'w'
+
+  @IsDateString()
+  lastContact: string
+
   @Min(0)
   customerLifetimeValue: number
 }

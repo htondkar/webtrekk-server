@@ -7,6 +7,7 @@ import {
   Patch,
   Post,
   Req,
+  Delete,
 } from '@nestjs/common'
 import { InjectRepository } from '@nestjs/typeorm'
 
@@ -56,5 +57,13 @@ export class CustomerController {
     id,
   ) {
     return this.customerService.editCustomer(id, body)
+  }
+
+  @Delete(':id')
+  delete(
+    @Param('id', new ParseIntPipe())
+    id: number,
+  ) {
+    return this.customerService.remove(id)
   }
 }

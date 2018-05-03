@@ -32,8 +32,8 @@ export class CustomerService {
     return await this.Customers.find({ customerID: id })
   }
 
-  async remove(id) {
-    await this.Customers.remove(id)
+  async remove(id: number) {
+    await this.Customers.delete({ customerID: id })
     return {
       message: 'successfully removed the customer',
     }
